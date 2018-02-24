@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F41A5FB8-CF0F-421B-9CD7-7D68E0D33C5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Secure_Bin</RootNamespace>
+    <AssemblyName>Secure Bin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Secure Bin Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SecureBinCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SecureBinCore\bin\Release\SecureBinCore.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEntityDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEntityDialog.Designer.cs">
+      <DependentUpon>AddEntityDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityType.cs" />
+    <Compile Include="LoginAuthentication\Crypter\Decrypt.cs" />
+    <Compile Include="LoginAuthentication\Crypter\Encrypt.cs" />
+    <Compile Include="LoginAuthentication\Crypter\GenerateIV.cs" />
+    <Compile Include="LoginAuthentication\FirstTimePasswordSet.cs" />
+    <Compile Include="LoginAuthentication\LoginAuthenticationProcess.cs" />
+    <Compile Include="LoginAuthentication\SaveLoginCredentials.cs" />
+    <Compile Include="SetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPassword.Designer.cs">
+      <DependentUpon>SetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecureBinHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecureBinHome.Designer.cs">
+      <DependentUpon>SecureBinHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEntityDialog.resx">
+      <DependentUpon>AddEntityDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPassword.resx">
+      <DependentUpon>SetPassword.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecureBinHome.resx">
+      <DependentUpon>SecureBinHome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsWindow.resx">
+      <DependentUpon>SettingsWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnlockDialog.resx">
+      <DependentUpon>UnlockDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SettingsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsWindow.Designer.cs">
+      <DependentUpon>SettingsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stability\RemoveTemporaryFiles.cs" />
+    <Compile Include="UnlockDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnlockDialog.Designer.cs">
+      <DependentUpon>UnlockDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1326443357_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1329412642_file_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows 7 %2881%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows 7 %2880%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resources\Shutdown_Box_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13254.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HP-Control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1334204134_shield_protection_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1334297753_old-view-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1334298137_DeleteRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecureBin_Splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\encrypt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protect_document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vista %2835%29.png" />
+    <None Include="Resources\Settings78fa.png" />
+    <Content Include="Secure Bin Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

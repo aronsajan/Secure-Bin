@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Secure Bin", "Secure Bin\Secure Bin.csproj", "{F41A5FB8-CF0F-421B-9CD7-7D68E0D33C5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureBinCore", "SecureBinCore\SecureBinCore.csproj", "{1ACAEE0E-DE1C-46E2-AA0C-DAC52F4C969F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypter", "Crypter\Crypter.csproj", "{361D65C1-A512-4B57-B22F-A52A21947262}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F41A5FB8-CF0F-421B-9CD7-7D68E0D33C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F41A5FB8-CF0F-421B-9CD7-7D68E0D33C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F41A5FB8-CF0F-421B-9CD7-7D68E0D33C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F41A5FB8-CF0F-421B-9CD7-7D68E0D33C5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ACAEE0E-DE1C-46E2-AA0C-DAC52F4C969F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ACAEE0E-DE1C-46E2-AA0C-DAC52F4C969F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ACAEE0E-DE1C-46E2-AA0C-DAC52F4C969F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ACAEE0E-DE1C-46E2-AA0C-DAC52F4C969F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{361D65C1-A512-4B57-B22F-A52A21947262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{361D65C1-A512-4B57-B22F-A52A21947262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{361D65C1-A512-4B57-B22F-A52A21947262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{361D65C1-A512-4B57-B22F-A52A21947262}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
